@@ -22,6 +22,11 @@ app.get('/dataBase', (req, res) =>{
     res.render('home', { title: 'dataBase',
     data: dataBase})
 })
+app.get('/post/:id', (req, res) => {
+    console.log(req.params.id);
+    console.log(dataBase[req.params.id]);
+    res.render('single',{title: 'HOME page',singleItem:dataBase[req.params.id]})
+})
 app.use((req, res) => {
     res.render('404', { title: 'NoConnection', })
 })

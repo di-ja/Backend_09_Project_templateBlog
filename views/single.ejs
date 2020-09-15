@@ -1,0 +1,17 @@
+<%-include('./partials/head')%>
+<style>
+    
+</style>
+<body>
+    <header>
+        <%-include('./partials/nav')%>
+    </header>
+    <main class="singleP">
+    <img src="<%= singleItem.url %>" alt="">
+    <p class="author"><%= singleItem.author %> </p>
+    <h1><%= singleItem.title %></h1>
+</main>
+    <%-include('./partials/footer')%>
+</body>
+
+
